@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  address: MyString
+  homeroom: 1
+  guardian: MyString
+  phone: 1
+  transportation: one
+
+two:
+  name: MyString
+  address: MyString
+  homeroom: 1
+  guardian: MyString
+  phone: 1
+  transportation: two
