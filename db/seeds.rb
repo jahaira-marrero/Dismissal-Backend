@@ -10,6 +10,8 @@ bus2 = Transportation.create(name: "Bus 2")
 walker = Transportation.create(name: "Walker")
 car = Transportation.create(name: "Car Rider")
 
+transArray = [bus1, bus2, walker, car]
+
 # Students
 80.times do
     name = Faker::Name.unique.name
