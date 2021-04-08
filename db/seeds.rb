@@ -9,6 +9,7 @@ bus1 = Transportation.create(name: "Bus 1")
 bus2 = Transportation.create(name: "Bus 2")
 walker = Transportation.create(name: "Walker")
 car = Transportation.create(name: "Car Rider")
+early = Transportation.create(name: "Early Pick Up")
 
 transArray = [bus1, bus2, walker, car]
 
@@ -19,7 +20,7 @@ transArray = [bus1, bus2, walker, car]
     guardian = Faker::Name.unique.name
     phone = Faker::PhoneNumber.cell_phone
     hw = Random.rand(1..6)
-    transportation = Transportation.all.sample.id
+    transportation = transArray.sample
     Student.create(name: name, address: address, guardian: guardian, phone: phone, homeroom: hw, transportation_id: transportation)
 
 # Changes
