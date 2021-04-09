@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
  
+  # resources :modifications
 # resources :students
   get "/students", to: "students#index"
   get "/students/new", to: "students#new"
@@ -27,14 +28,14 @@ Rails.application.routes.draw do
   patch "/transportations/:id", to: "transportations#update"
   delete "transportations/:id", to: "transportations#destroy"
 
-  # resources :changes
-  get "/changes", to: "changes#index"
-  get "/changes/new", to: "changes#new"
-  post "/changes", to: "changes#create"
-  get "/changes/:id", to: "changes#show"
-  get "/changes/:id/edit", to: "changes#edit"
-  patch "/changes/:id", to: "changes#update"
-  delete "changes/:id", to: "changes#destroy"
+  # resources :modifications
+  get "/modifications", to: "modifications#index"
+  get "/modifications/new", to: "modifications#new"
+  post "/modifications", to: "modifications#create"
+  get "/modifications/:id", to: "modifications#show"
+  get "/modifications/:id/edit", to: "modifications#edit"
+  patch "/modifications/:id", to: "modifications#update"
+  delete "modifications/:id", to: "modifications#destroy"
   
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

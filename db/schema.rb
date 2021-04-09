@@ -10,18 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_07_184945) do
+ActiveRecord::Schema.define(version: 2021_04_09_161148) do
 
-  create_table "changes", force: :cascade do |t|
+  create_table "modifications", force: :cascade do |t|
     t.string "date"
     t.integer "user_id", null: false
     t.integer "transportation_id", null: false
     t.integer "student_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["student_id"], name: "index_changes_on_student_id"
-    t.index ["transportation_id"], name: "index_changes_on_transportation_id"
-    t.index ["user_id"], name: "index_changes_on_user_id"
+    t.index ["student_id"], name: "index_modifications_on_student_id"
+    t.index ["transportation_id"], name: "index_modifications_on_transportation_id"
+    t.index ["user_id"], name: "index_modifications_on_user_id"
   end
 
   create_table "students", force: :cascade do |t|
@@ -50,8 +50,8 @@ ActiveRecord::Schema.define(version: 2021_04_07_184945) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "changes", "students"
-  add_foreign_key "changes", "transportations"
-  add_foreign_key "changes", "users"
+  add_foreign_key "modifications", "students"
+  add_foreign_key "modifications", "transportations"
+  add_foreign_key "modifications", "users"
   add_foreign_key "students", "transportations"
 end

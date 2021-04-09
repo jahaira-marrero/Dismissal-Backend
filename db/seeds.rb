@@ -2,13 +2,10 @@ User.destroy_all
 User.reset_pk_sequence
 Transportation.destroy_all
 Transportation.reset_pk_sequence
-Change.destroy_all
-Change.reset_pk_sequence
+Modification.destroy_all
+Modification.reset_pk_sequence
 Student.destroy_all
 Student.reset_pk_sequence
-
-
-
 
 
 # Teachers
@@ -38,9 +35,9 @@ cellphone = [3210001234, 3211231234, 3213211234, 3210011234, 3210021234, 3210031
     Student.create!(name: name, address: address, guardian: guardian, phone: phone, homeroom: hw, transportation_id: transportation.id)
 end 
 
-# Changes
-change1 = Change.create(date: "4/7/21", user_id: 1, transportation_id: 1, student_id: 9)
-change2 = Change.create(date: "4/8/21", user_id: 2, transportation_id: 5, student_id: 5)
+# Modifications
+change1 = Modification.create(date: "4/7/21", user_id: 1, transportation_id: 1, student_id: 9)
+change2 = Modification.create(date: "4/8/21", user_id: 2, transportation_id: 5, student_id: 5)
 
 
 

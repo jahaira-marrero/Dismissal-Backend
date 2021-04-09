@@ -1,5 +1,5 @@
 class Student < ApplicationRecord
-  has_many :dismissalchanges, class_name: "Change"
+  has_many :modifications
   belongs_to :transportation
  
 end
