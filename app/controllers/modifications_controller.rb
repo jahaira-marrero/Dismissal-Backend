@@ -1,6 +1,6 @@
 class ModificationsController < ApplicationController
     def index
-        @modifications = Modification.all 
+        @modifications = Modification.all
         render json: @modifications
     end
 
