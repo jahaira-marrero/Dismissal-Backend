@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
  
-  # resources :modifications
+# resources :modifications
 # resources :students
   get "/students", to: "students#index"
   get "/students/new", to: "students#new"
@@ -37,6 +37,8 @@ Rails.application.routes.draw do
   patch "/modifications/:id", to: "modifications#update"
   delete "modifications/:id", to: "modifications#destroy"
   
+  # Login
+  post "/login", to: "users#login"
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

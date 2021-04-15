@@ -11,7 +11,8 @@ Student.reset_pk_sequence
 # Teachers
 20.times do
     name = Faker::Name.unique.name
-    User.create(name: name, role: "Teacher", password: "Teacher123")
+    username = Faker::Internet.email
+    User.create(name: name, role: "Teacher", username: username, password: "Teacher123")
 end
 
 # Transportation
