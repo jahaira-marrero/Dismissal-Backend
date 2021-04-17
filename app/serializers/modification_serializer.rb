@@ -3,4 +3,6 @@ class ModificationSerializer < ActiveModel::Serializer
   # has_one :user
   # has_one :transportation
   has_one :student
+
+ 
 end
