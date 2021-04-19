@@ -1,3 +1,3 @@
 class TransportationSerializer < ActiveModel::Serializer
-  attributes :id, :name
+  attributes :id, :name, :students
 end
